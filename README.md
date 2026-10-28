@@ -29,3 +29,6 @@ Con **HTML, CSS y JavaScript puros**, sin librerías ni dependencias externas.
   actualmente, 14 de enero de 2027 a las 8:00 h, hora del centro de México (`-06:00`).
 - **Diseño adaptable:** en computadora las cuatro tarjetas del contador van en una fila; en celular
   vertical se acomodan en dos filas de dos.
+- **Seguridad:** la página no recibe datos, no usa cookies ni carga nada de otros sitios. Una política
+  de seguridad de contenido (CSP) en `index.html` solo permite estilos, scripts e imágenes del propio
+  sitio, y la etiqueta `noindex` evita que aparezca en buscadores. Se publica solo por HTTPS.

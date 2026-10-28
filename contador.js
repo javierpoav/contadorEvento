@@ -49,6 +49,13 @@ var FIN_EVENTO = '2027-01-16T00:00:00-06:00';    // Fin del 15 de enero
   }
 
   function actualizar() {
+    // Si la fecha de configuración está mal escrita, muestra un aviso en lugar de «NaN»
+    if (isNaN(inicio) || isNaN(fin)) {
+      console.error('contador.js: INICIO_EVENTO o FIN_EVENTO no tienen un formato de fecha válido.');
+      mostrarMensaje('Fecha por confirmar', 'Pronto compartiremos la fecha y hora del evento.');
+      return;
+    }
+
     var ahora = Date.now();
     var restante = inicio - ahora;
 
