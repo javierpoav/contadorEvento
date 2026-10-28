@@ -3,7 +3,7 @@
 ## Qué se hizo
 
 Una página web de una sola pantalla para **Esterinova** que muestra una cuenta regresiva en vivo
-hacia la Auditoría del Consejo de Salubridad General en **Unidad Puebla**, los días **14 y 15 de enero de 2027**.
+hacia la Auditoría Presencial del Consejo de Salubridad General en **Unidad Puebla**, los días **14 y 15 de enero de 2027**.
 
 - Muestra el logo de la clínica, el mensaje «Faltan» y los **días, horas, minutos y segundos** restantes.
 - El contador se actualiza cada segundo.

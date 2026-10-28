@@ -79,7 +79,7 @@ body::after {
 .marca img {
   display: block;
   width: auto;
-  height: clamp(120px, 25vh, 230px);
+  height: clamp(120px, 23vh, 220px);
 }
 
 .cuenta {
