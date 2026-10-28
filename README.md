@@ -1,42 +1,30 @@
 # Cuenta regresiva · Auditoría del Consejo de Salubridad General
 
-Página de una sola pantalla con la cuenta regresiva (días, horas, minutos y segundos) para la
-Auditoría del Consejo de Salubridad General de **Esterinova**, los días **14 y 15 de enero de 2027**.
+## Qué se hizo
 
-Hecha solo con HTML, CSS y JavaScript, sin dependencias. Se adapta a celular y computadora.
+Una página web de una sola pantalla para **Esterinova** que muestra una cuenta regresiva en vivo
+hacia la Auditoría del Consejo de Salubridad General, los días **14 y 15 de enero de 2027**.
 
-## Archivos
+- Muestra el logo de la clínica, el mensaje «Faltan» y los **días, horas, minutos y segundos** restantes.
+- El contador se actualiza cada segundo.
+- Al llegar la hora del evento, el contador se cambia por el mensaje «¡Llegó el día!» y, al terminar
+  la auditoría, por un mensaje de agradecimiento al equipo.
+- Se ve bien en celular y en computadora.
 
-| Archivo | Contenido |
+## Cómo se hizo
+
+Con **HTML, CSS y JavaScript puros**, sin librerías ni dependencias externas.
+
+| Archivo | Función |
 | --- | --- |
-| `index.html` | Estructura de la página |
-| `estilos.css` | Diseño y colores de Esterinova (morado `#670580`, verde `#7EBB04`) |
-| `contador.js` | Lógica de la cuenta regresiva |
-| `img/` | Logo, favicon e ícono para celulares |
-| `.nojekyll` | Indica a GitHub Pages que publique los archivos tal cual |
+| `index.html` | Estructura de la página: logo, contador, nombre y fecha del evento |
+| `estilos.css` | Diseño con los colores de Esterinova y adaptación a distintos tamaños de pantalla |
+| `contador.js` | Calcula el tiempo restante y lo actualiza cada segundo |
+| `img/` | Logo de la clínica e íconos para la pestaña del navegador y el celular |
 
-## Cambiar la fecha u hora del evento
-
-Edita las dos primeras líneas de `contador.js`:
-
-```js
-var INICIO_EVENTO = '2027-01-14T08:00:00-06:00'; // Inicio de la auditoría
-var FIN_EVENTO = '2027-01-16T00:00:00-06:00';    // Fin del 15 de enero
-```
-
-`-06:00` es la hora del centro de México. Cuando llega la hora de inicio, el contador se cambia por
-el mensaje «¡Llegó el día!», y al terminar el evento muestra un mensaje de agradecimiento.
-
-## Publicar gratis en GitHub Pages
-
-1. Sube estos archivos a la rama principal del repositorio (`main`).
-2. En GitHub, entra a **Settings → Pages**.
-3. En **Build and deployment**, elige **Source: Deploy from a branch**, rama **`main`** y carpeta **`/ (root)`**. Guarda.
-4. En uno o dos minutos la página quedará publicada en
-   `https://javierpoav.github.io/contadorEvento/`.
-
-> Para cuentas gratuitas de GitHub, el repositorio debe ser público para usar GitHub Pages.
-
-## Ver la página en tu computadora
-
-Abre `index.html` con doble clic en cualquier navegador.
+- **Colores:** se tomaron directamente del logo: morado `#670580` y verde `#7EBB04`.
+- **Contador:** `contador.js` resta la hora actual a la fecha del evento y la convierte en días, horas,
+  minutos y segundos. La fecha y hora están al inicio del archivo (`INICIO_EVENTO` y `FIN_EVENTO`);
+  actualmente, 14 de enero de 2027 a las 8:00 h, hora del centro de México (`-06:00`).
+- **Diseño adaptable:** en computadora las cuatro tarjetas del contador van en una fila; en celular
+  vertical se acomodan en dos filas de dos.
