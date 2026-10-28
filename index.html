@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cuenta regresiva · Auditoría del Consejo de Salubridad General | Esterinova</title>
+  <meta name="description" content="Cuenta regresiva para la Auditoría del Consejo de Salubridad General en Esterinova: 14 y 15 de enero de 2027.">
+  <meta name="theme-color" content="#670580">
+
+  <meta property="og:title" content="Cuenta regresiva · Auditoría del Consejo de Salubridad General">
+  <meta property="og:description" content="Esterinova · 14 y 15 de enero de 2027">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="img/favicon-48.png">
+  <link rel="apple-touch-icon" href="img/icono-180.png">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="pagina">
+    <header class="marca">
+      <img src="img/logo-esterinova.jpg" alt="Esterinova" width="481" height="415">
+    </header>
+
+    <section class="cuenta" aria-labelledby="titulo-evento">
+      <p class="faltan" id="faltan">Faltan</p>
+
+      <div class="contador" id="contador" role="timer">
+        <div class="unidad">
+          <span class="numero" id="dias">--</span>
+          <span class="etiqueta" id="dias-etiqueta">días</span>
+        </div>
+        <div class="unidad">
+          <span class="numero" id="horas">--</span>
+          <span class="etiqueta" id="horas-etiqueta">horas</span>
+        </div>
+        <div class="unidad">
+          <span class="numero" id="minutos">--</span>
+          <span class="etiqueta" id="minutos-etiqueta">minutos</span>
+        </div>
+        <div class="unidad">
+          <span class="numero" id="segundos">--</span>
+          <span class="etiqueta" id="segundos-etiqueta">segundos</span>
+        </div>
+      </div>
+
+      <div class="mensaje" id="mensaje" hidden>
+        <p class="mensaje-titulo" id="mensaje-titulo"></p>
+        <p class="mensaje-texto" id="mensaje-texto"></p>
+      </div>
+
+      <h1 class="evento" id="titulo-evento">
+        <span class="para" id="para">para la </span>Auditoría del Consejo de Salubridad General
+      </h1>
+
+      <p class="fecha">
+        <span><time datetime="2027-01-14">14</time> y <time datetime="2027-01-15">15 de enero de 2027</time></span>
+      </p>
+    </section>
+  </main>
+
+  <script src="contador.js"></script>
+</body>
+</html>

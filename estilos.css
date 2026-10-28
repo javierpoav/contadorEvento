@@ -1,0 +1,260 @@
+/* Colores tomados del logo de Esterinova */
+:root {
+  --morado: #670580;
+  --morado-oscuro: #45035a;
+  --verde: #7ebb04;
+  --verde-suave: #f0f7e1;
+  --texto: #2a0d33;
+  --blanco: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background: var(--blanco);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* Formas decorativas inspiradas en los cuadros inclinados del logo */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  width: 70vmin;
+  height: 70vmin;
+  border-radius: 18%;
+  pointer-events: none;
+}
+
+body::before {
+  right: -30vmin;
+  bottom: -32vmin;
+  background: var(--morado);
+  opacity: 0.08;
+  transform: rotate(-14deg);
+}
+
+body::after {
+  left: -32vmin;
+  bottom: -36vmin;
+  background: var(--verde);
+  opacity: 0.16;
+  transform: rotate(12deg);
+}
+
+.pagina {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 4vh, 2.75rem);
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(1.25rem, 4vh, 3rem) max(16px, env(safe-area-inset-right)) clamp(1.25rem, 4vh, 3rem) max(16px, env(safe-area-inset-left));
+  text-align: center;
+}
+
+.marca img {
+  display: block;
+  width: auto;
+  height: clamp(120px, 25vh, 230px);
+}
+
+.cuenta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.75rem, 2.6vh, 1.5rem);
+  width: 100%;
+  max-width: 920px;
+}
+
+.faltan {
+  padding-left: 0.3em; /* compensa el espaciado de letras para centrar */
+  color: var(--morado);
+  font-size: clamp(1.15rem, 1.8vw + 0.6rem, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.contador {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(0.6rem, 2vw, 1.25rem);
+  width: 100%;
+}
+
+.unidad {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  overflow: hidden;
+  padding: clamp(1rem, 3.2vh, 1.9rem) 0.5rem clamp(0.85rem, 2.6vh, 1.5rem);
+  border-radius: clamp(14px, 2vw, 24px);
+  background: var(--morado);
+  color: var(--blanco);
+  box-shadow: 0 14px 28px -16px rgba(69, 3, 90, 0.7);
+}
+
+/* Franja verde superior en cada tarjeta */
+.unidad::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--verde);
+}
+
+.numero {
+  font-size: clamp(2.25rem, 8.5vw, 6rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.etiqueta {
+  color: var(--verde);
+  font-size: clamp(0.75rem, 0.9vw + 0.5rem, 1.15rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.evento {
+  max-width: 30ch;
+  color: var(--morado);
+  font-size: clamp(1.2rem, 1.6vw + 0.8rem, 2.1rem);
+  font-weight: 800;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.para {
+  color: var(--texto);
+  font-weight: 500;
+}
+
+.fecha {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.55rem 1.15rem;
+  border: 1px solid rgba(126, 187, 4, 0.55);
+  border-radius: 999px;
+  background: var(--verde-suave);
+  color: var(--morado-oscuro);
+  font-size: clamp(0.95rem, 0.6vw + 0.8rem, 1.2rem);
+  font-weight: 700;
+}
+
+.fecha::before {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background: var(--verde);
+}
+
+/* Mensaje que reemplaza al contador cuando llega el día */
+.mensaje {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: clamp(1.25rem, 4vh, 2.25rem) 1rem;
+  border-top: 6px solid var(--verde);
+  border-radius: clamp(14px, 2vw, 24px);
+  background: var(--morado);
+  color: var(--blanco);
+  box-shadow: 0 14px 28px -16px rgba(69, 3, 90, 0.7);
+}
+
+.mensaje-titulo {
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.mensaje-texto {
+  color: var(--verde);
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.4rem);
+  font-weight: 700;
+}
+
+/* Celulares en vertical: tarjetas en cuadrícula de 2 × 2 */
+@media (max-width: 479px) {
+  .contador {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .numero {
+    font-size: clamp(2.75rem, 15vw, 4rem);
+  }
+}
+
+/* Celulares en horizontal o pantallas muy bajas */
+@media (max-height: 500px) and (orientation: landscape) {
+  .pagina {
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .faltan {
+    font-size: 1rem;
+  }
+
+  .evento {
+    max-width: none;
+    font-size: 1.1rem;
+  }
+
+  .fecha {
+    padding: 0.35rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .marca img {
+    height: 72px;
+  }
+
+  .cuenta {
+    gap: 0.6rem;
+  }
+
+  .unidad {
+    padding: 0.8rem 0.5rem 0.65rem;
+  }
+
+  .numero {
+    font-size: clamp(2rem, 6.5vw, 3.25rem);
+  }
+}
