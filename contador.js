@@ -31,6 +31,7 @@ var FIN_EVENTO = '2027-01-16T00:00:00-06:00';    // Fin del 15 de enero
   var mensaje = document.getElementById('mensaje');
   var mensajeTitulo = document.getElementById('mensaje-titulo');
   var mensajeTexto = document.getElementById('mensaje-texto');
+  var motivacion = document.getElementById('motivacion');
 
   var temporizador = null;
 
@@ -58,6 +59,7 @@ var FIN_EVENTO = '2027-01-16T00:00:00-06:00';    // Fin del 15 de enero
         temporizador = setTimeout(actualizar, Math.min(fin - ahora, 60000));
       } else {
         mostrarMensaje('La auditoría ha concluido', 'Gracias a todo el equipo por su esfuerzo.');
+        motivacion.hidden = true;
       }
       return;
     }

@@ -162,6 +162,20 @@ body::after {
   font-weight: 500;
 }
 
+.sede {
+  white-space: nowrap;
+}
+
+.motivacion {
+  max-width: 34ch;
+  color: var(--morado-oscuro);
+  font-size: clamp(1rem, 0.8vw + 0.8rem, 1.4rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
 .fecha {
   display: inline-flex;
   align-items: center;
@@ -220,6 +234,23 @@ body::after {
   }
 }
 
+/* Celulares pequeños en vertical */
+@media (max-height: 700px) and (orientation: portrait) {
+  .pagina {
+    gap: 0.9rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .marca img {
+    height: 100px;
+  }
+
+  .cuenta {
+    gap: 0.6rem;
+  }
+}
+
 /* Celulares en horizontal o pantallas muy bajas */
 @media (max-height: 500px) and (orientation: landscape) {
   .pagina {
@@ -239,6 +270,11 @@ body::after {
 
   .fecha {
     padding: 0.35rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .motivacion {
+    max-width: none;
     font-size: 0.95rem;
   }
 
